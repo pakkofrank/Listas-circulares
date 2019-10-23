@@ -33,10 +33,10 @@ export default class Ruta{
         }
     }
 
-    buscar(ubucacion){
+    buscar(ubicacion){
         let a = this._inicio;
         let u = this._final;
-        while(a.ubucacion != ubucacion && u.codigo != ubucacion){
+        while(a.ubicacion != ubicacion && u.codigo != ubicacion){
             a = a.sig;
         }
         return a;
@@ -63,10 +63,11 @@ export default class Ruta{
         let c = 1;
         if(a != null){
             do{
-                row.innerHTML += '';
+                row.innerHTML += `base${contador}: ${a.ubicacion} llegada:${a.llegada}m   salida:${a.u}m`;
                 c++
                 a = a.sig;
             }while(a != u);
+            
 
         }
 

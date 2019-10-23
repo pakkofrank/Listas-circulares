@@ -15,7 +15,7 @@
 
 <body id="fondo" class="chido2">
     <div class="p-5  titulo">
-        <h1>sistema de informacion</h1>
+        <h1>Rutas</h1>
     </div><br>
     <div class="row justify-content-between">
         <!-- Formulario -->
@@ -23,24 +23,16 @@
             <div class="row justify-content-between">
                 <form id="form" class="col-10 needs-validation chido" novalidate>
                     <div class="form-group">
-                        <label for="codigo">codigo</label>
-                        <input type="number" placeholder="-----" id="codigo" class="form-control">
+                        <label for="ubicacion">ubicacion</label>
+                        <input type="text" placeholder="-----" id="ubicacion" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" placeholder="name" id="nombre" class="form-control">
+                        <label for="tLlegada">Tiempo de llegada</label>
+                        <input type="number" placeholder="name" id="tLlegada" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="sueldo">precio</label>
-                        <input type="number" placeholder="$0" id="precio" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="cantidad">cantidad</label>
-                        <input type="number" id="cantidad" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="descripcion">descripcion</label>
-                        <input type="text" id="descripcion" class="form-control">
+                        <label for="tSalida">Tiempo de salida</label>
+                        <input type="number" placeholder="$0" id="tSalida" class="form-control">
                     </div>
                     <button id="agregar" type="button" class="btn btn-primary">
                         Agregar
@@ -58,22 +50,6 @@
 			</table>
 			<button id="btnEliminar" type="button">ELIMINAR</button>
 		</div>
-        <!-- Tabla -->
-        <div class="col-md-8" style="overflow: auto;height:300px">
-            <table class="table table-hover table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">codigo</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">precio</th>
-                        <th scope="col">cantidad</th>
-                        <th scope="col">descripcion</th>
-                        <th scope="col">accion</th>
-                    </tr>
-                </thead>
-                <tbody id="tabla"></tbody>
-            </table>
-        </div>
     </div>
     </div>
     </div>
