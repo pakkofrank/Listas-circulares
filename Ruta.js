@@ -33,6 +33,23 @@ export default class Ruta{
         }
     }
 
+    eliminar(ubicacion){
+        let b = this.buscarAnterior(ubicacion);
+        if(b.sig == this._inicio && b == this._final){
+            this._inicio = this._final = null;
+            
+        }else if(b.sig == this._inicio){
+            b.sig = b.sig.sig;
+            this._inicio = b.sig;
+        }else if(b.sig == this._final){
+            b.sig = b.sig.sig;
+            this._final = b;
+
+        }else{
+            b.sig = b.sig.sig;
+        }
+    }
+
     buscar(ubicacion){
         let a = this._inicio;
         let u = this._final;
@@ -67,8 +84,6 @@ export default class Ruta{
                 c++
                 a = a.sig;
             }while(a != u);
-            
-
         }
 
     }

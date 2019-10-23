@@ -19,7 +19,12 @@ class Main {
             let base = new Base(objBase);
             ruta.agregar(base);
 
-        })
+        });
+        document.querySelector("#btnEliminar").addEventListener('click', () =>{
+            let eliminar = document.querySelector("#codigoE").value;
+            ruta.eliminar(eliminar);
+
+        });
     }
     
     
